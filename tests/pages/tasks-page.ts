@@ -1,4 +1,5 @@
 import { Page, expect, Locator } from '@playwright/test'
+import {faker} from '@faker-js/faker'
 
 export class TasksPage {
     readonly page: Page
@@ -13,7 +14,7 @@ export class TasksPage {
 
     async createTask(){
         expect(this.inputTaskName).toBeVisible()
-        await this.inputTaskName.fill('Ler um livro')
+        await this.inputTaskName.fill(faker.lorem.word())
 
         await this.btnInputTask.click()
     }
