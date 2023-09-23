@@ -13,5 +13,8 @@
     "E2E Tests",
     "API Tests"
   ],
-  "scripts": {}
+  "scripts": {
+    "playwright:open": "playwright test --ui",
+    "playwright:debug": "playwright test --debug"
+  }
 }
